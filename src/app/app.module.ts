@@ -8,6 +8,7 @@ import { environment } from '../environments/environment';
 import { TodoComponent } from './components/todo/todo.component';
 import { NavComponent } from './shared/nav/nav.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { TodoDetailsComponent } from './components/todo-details/todo-details.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { FooterComponent } from './shared/footer/footer.component';
     AppComponent,
     TodoComponent,
     NavComponent,
-    FooterComponent
+    FooterComponent,
+    TodoDetailsComponent
   ],
   imports: [
     BrowserModule,
