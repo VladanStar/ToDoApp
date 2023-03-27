@@ -9,6 +9,8 @@
                 type="text"
                 id="name"
                 name="name"
+                #name="ngModel"
+                required
                 class="form-control"
               />
             </div>
@@ -20,6 +22,8 @@
                 name="status"
                 id="status"
                 class="form-control"
+                #status="ngModel"
+                required
               />
             </div>
             <div class="mb-3">
@@ -30,6 +34,9 @@
                 id="date"
                 name="date"
                 class="form-control"
+                #date="ngModel"
+                required
+                [ngClass]="{ 'is-invalid': name.invalid && name.touched }"
               />
             </div>
             <div class="mb-3">
@@ -40,16 +47,17 @@
                 name="done"
                 id="done"
                 class="form-control"
+                #done="ngModel"
+                [ngClass]="{ 'is-invalid': done.invalid && done.touched }"
+                required
               />
             </div>
             <div class="mb-3">
               <label for="category">category</label>
              <select name="category" id="category" class="form-select" [(ngModel)] ='todo.category'>
 
-                <option value="{{todo.category}}">{{todo.category}}</option>
-                <option value="social">Social</option>
-                <option value="free">Free</option>
-                <option value="nature">Nature</option>
+                <!-- <option value="{{todo.category}}">{{todo.category}}</option> -->
+                <option *ngFor="let c of category" [ngValue]="c.id">{{c.name}}</option>
              </select>
             </div>
           

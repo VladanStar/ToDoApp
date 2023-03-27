@@ -3,6 +3,7 @@ import { NgForm } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Todo } from 'src/app/models/todo';
 import { TodoService } from 'src/app/services/todo.service';
+import { CategoryService } from 'src/app/services/category.service';
 
 @Component({
   selector: 'app-edit-todo',
@@ -18,14 +19,16 @@ export class EditTodoComponent implements OnInit {
     done: '',
     category: '',
   };
+  category: any;
   constructor(
     private todoService: TodoService,
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private categoryService:CategoryService
   ) {}
 
   ngOnInit(): void {
-
+    this.categoryService.getAll().subscribe(p=>this.category=p)
     this.id= this.route.snapshot.paramMap.get("id")
     if(this.id){
   

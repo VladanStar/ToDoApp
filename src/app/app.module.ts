@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NO_ERRORS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -11,7 +11,8 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { TodoDetailsComponent } from './components/todo-details/todo-details.component';
 import { EditTodoComponent } from './components/edit-todo/edit-todo.component';
 import {FormsModule} from "@angular/forms";
-import { AddTodoComponent } from './components/add-todo/add-todo.component'
+import { AddTodoComponent } from './components/add-todo/add-todo.component';
+import { CommonModule } from '@angular/common';
 
 
 @NgModule({
@@ -23,8 +24,11 @@ import { AddTodoComponent } from './components/add-todo/add-todo.component'
     TodoDetailsComponent,
     EditTodoComponent,
     AddTodoComponent
+    
   ],
+
   imports: [
+    CommonModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,

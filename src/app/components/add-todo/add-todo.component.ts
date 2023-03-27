@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { TodoService } from 'src/app/services/todo.service';
+import { CategoryService } from 'src/app/services/category.service';
+
 
 @Component({
   selector: 'app-add-todo',
@@ -9,9 +11,13 @@ import { TodoService } from 'src/app/services/todo.service';
   styleUrls: ['./add-todo.component.css']
 })
 export class AddTodoComponent implements OnInit {
-  constructor(private todoService:TodoService, private router:Router){}
+ 
+  category:any;
+  constructor(private todoService:TodoService, 
+    private router:Router,
+    private categoryService:CategoryService){}
   ngOnInit(): void {
-
+this.categoryService.getAll().subscribe(p=>this.category=p)
   }
   addTodo(f:NgForm){
       // console.log(f.value)

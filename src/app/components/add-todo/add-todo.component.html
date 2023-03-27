@@ -45,7 +45,7 @@
             </div>
           
             <div class="mb-3">
-              <label for="date">Broj Dresa</label>
+              <label for="date">Datum</label>
               <input
               title="#"
               ngModel
@@ -57,23 +57,17 @@
               required
               [ngClass]="{ 'is-invalid': date.invalid && date.touched }"
               />
+              <div [hidden]="!name.errors?.['required']" class="invalid-feedback"></div>
             </div>
             <div class="mb-3">
-              <label for="category">Category</label>
-              <input
-              title="#"
-              ngModel
-              type="text"
-              id="category"
-              #category="ngModel"
-              name="category"
-              class="form-control"
-              required
-              [ngClass]="{ 'is-invalid': category.invalid && category.touched }"
-              />
-            </div>
+                <label for="category">category</label>
+               <select name="category" id="category" class="form-select"ngModel>
+                  <option *ngFor="let c of category" [ngValue]="c.id">{{c.name}}</option>
+                
+               </select>
+              </div>
           
-            <button class="btn btn-success" type="submit">Edit player</button>
+            <button class="btn btn-success" type="submit">Add Todo</button>
           </form>
     </div>
 </div>
