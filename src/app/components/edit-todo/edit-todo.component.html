@@ -1,1 +1,60 @@
-<p>edit-todo works!</p>
+<div class="container">
+    <div class="row">
+        <form #f="ngForm" (ngSubmit)="updateTodo(f)">
+            <div class="mb-3">
+              <label for="name">Name</label>
+              <input
+                title="#f"
+                [(ngModel)]="todo.name"
+                type="text"
+                id="name"
+                name="name"
+                class="form-control"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="status">status</label>
+              <input
+                [(ngModel)]="todo.status"
+                type="text"
+                name="status"
+                id="status"
+                class="form-control"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="date">date</label>
+              <input
+                [(ngModel)]="todo.date"
+                type="text"
+                id="date"
+                name="date"
+                class="form-control"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="done">Done</label>
+              <input
+                [(ngModel)]="todo.done"
+                type="text"
+                name="done"
+                id="done"
+                class="form-control"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="category">category</label>
+             <select name="category" id="category" class="form-select" [(ngModel)] ='todo.category'>
+
+                <option value="{{todo.category}}">{{todo.category}}</option>
+                <option value="social">Social</option>
+                <option value="free">Free</option>
+                <option value="nature">Nature</option>
+             </select>
+            </div>
+          
+            <button class="btn btn-success" type="submit">Edit todo</button>
+          </form>
+          
+    </div>
+</div>

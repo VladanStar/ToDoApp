@@ -10,6 +10,8 @@ import { NavComponent } from './shared/nav/nav.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { TodoDetailsComponent } from './components/todo-details/todo-details.component';
 import { EditTodoComponent } from './components/edit-todo/edit-todo.component';
+import {FormsModule} from "@angular/forms";
+import { AddTodoComponent } from './components/add-todo/add-todo.component'
 
 
 @NgModule({
@@ -19,11 +21,13 @@ import { EditTodoComponent } from './components/edit-todo/edit-todo.component';
     NavComponent,
     FooterComponent,
     TodoDetailsComponent,
-    EditTodoComponent
+    EditTodoComponent,
+    AddTodoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     AngularFireModule.initializeApp(environment.firebase)
     
   ],
