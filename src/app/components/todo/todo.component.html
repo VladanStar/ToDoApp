@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        <input  type="text" class="form-control my-2" placeholder="serach">
+        <table class="my-5 table table-hover table-striped">
+            <thead class="table-dark">
+                <tr>
+                    <th>Name</th>
+                    <th>Status</th>
+                    <th>Datum</th>
+                    <th>Kategorija</th>
+                   <th>Done</th>
+                 
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let todo of todos;let i = index">
+                    <td>{{todo.name}}</td>
+                    <td>{{todo.status}}</td>
+                    <td>{{todo.date}}</td>
+                    <td>{{todo.category}}</td>
+                    <td>{{todo.done}}</td>
+                 
+                    <td> <a class="btn btn-warning" routerLink="todo/{{todo.id}}">Details</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div> 

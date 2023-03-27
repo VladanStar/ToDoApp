@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "project-todo-a52c9": {
+      "hosting": {
+        "projectToDo": [
+          "project-todo-a52c9"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "project-todo-a52c9"
+  }
+}
