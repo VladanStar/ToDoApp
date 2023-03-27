@@ -1,0 +1,31 @@
+.footer {
+    background: linear-gradient(to top, #f31818 45%, #e90303 55%) !important;
+    overflow: hidden;
+    padding: 20px 10px;
+    color:#fff !important;
+    top: 100%;
+  }
+  h1 {
+      font-weight: bold;
+      color: #fff !important;
+      font-size: 20px;
+      text-align: left;
+    }
+    p {
+        color: #fff !important;
+      font-size: 12px;
+    }
+    a {
+        color: #fff !important;
+      text-decoration: none;
+      padding: 0px 10px;
+      font-size: 17px;
+    }
+    a:hover {
+      color: var(--active-color);
+    }
+    i {
+      padding: 0px 10px;
+      color: #fff !important;
+  
+    }

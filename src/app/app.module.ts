@@ -7,13 +7,15 @@ import {AngularFireModule} from "@angular/fire/compat"
 import { environment } from '../environments/environment';
 import { TodoComponent } from './components/todo/todo.component';
 import { NavComponent } from './shared/nav/nav.component';
+import { FooterComponent } from './shared/footer/footer.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     TodoComponent,
-    NavComponent
+    NavComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
