@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import {AngularFireModule} from "@angular/fire/compat"
 import { environment } from '../environments/environment';
 import { TodoComponent } from './components/todo/todo.component';
+import { NavComponent } from './shared/nav/nav.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    TodoComponent
+    TodoComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
