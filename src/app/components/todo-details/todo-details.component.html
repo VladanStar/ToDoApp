@@ -1,30 +1,32 @@
 <div class="container">
     <div class="row">
-      <input type="text" class="form-control my-2" placeholder="serach" />
-      <table class="my-5 table table-hover table-striped">
-        <thead class="table-dark">
-          <tr>
-            <th>Name</th>
-            <th>Status</th>
-            <th>Datum</th>
-            <th>Kategorija</th>
-            <th>Done</th>
-  
-            <th></th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- <tr *ngIf="todo">
-            <td>{{ name }}</td>
-            <td>{{ status }}</td>
-            <td>{{ date | date:'dd.MM.yyyy.'}}</td>
-            <td>{{ category }}</td>
-            <td>{{ done }}</td>
-  
-      
-          </tr> -->
-        </tbody>
-      </table>
+      <div class="col-4">
+      <div class="card" *ngIf="todo">
+    
+          <a routerLink="/" class="btn btn-sm btn-secondary mb-3 back"  >Back</a>
+          <h3 class="card-header">{{todo.name}}</h3>
+    
+          <div class="card-body">
+              <ul class="list-group">
+                  <li class="list-group-item">Ime: {{todo.name}}</li>
+                  <li class="list-group-item">Status: {{todo.status}}</li>
+                  <li class="list-group-item">Done: {{todo.done}}</li>
+                  <li class="list-group-item">Kategorija: {{todo.category}}</li>
+                  <li class="list-group-item">Datum {{todo.date |  date:'dd.MM.yyyy.'}}</li>
+                
+              </ul>
+          </div>
+          <div class="card-footer">
+              <div class="btn-group">
+                  <a routerLink="/todo/edit/{{todo.id}}" class="btn btn-info">Edit</a>
+                  <button class="btn btn-danger" (click)="deleteTodo()">Delete</button>
+    
+              </div>
+          </div>
+      </div>
+    
+      </div>
+     
+      </div>
+    
     </div>
-  </div>
-  
