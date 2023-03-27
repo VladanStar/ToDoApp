@@ -3,6 +3,6 @@ export interface Todo {
     name?:string;
     done?:string;
     status?:string;
-    date:Date;
+    date?:Date;
     category?:string;
 }
