@@ -1,75 +1,79 @@
-<form #f="ngForm" (ngSubmit)="addTodo(f)">
-    <div class="mb-3">
-      <label for="name">Name</label>
-      <input
-      title="#"
-      ngModel
-      type="text"
-      id="name"
-      #name="ngModel"
-      name="name"
-      class="form-control"
-      required
-      [ngClass]="{ 'is-invalid': name.invalid && name.touched }"
-      />
+<div class="container">
+    <div class="row">
+        <form #f="ngForm" (ngSubmit)="addTodo(f)">
+            <div class="mb-3">
+              <label for="name">Name</label>
+              <input
+              title="#"
+              ngModel
+              type="text"
+              id="name"
+              #name="ngModel"
+              name="name"
+              class="form-control"
+              required
+              [ngClass]="{ 'is-invalid': name.invalid && name.touched }"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="status">status</label>
+              <input
+              title="#"
+              ngModel
+              type="text"
+              id="status"
+              #status="ngModel"
+              name="status"
+              class="form-control"
+              required
+              [ngClass]="{ 'is-invalid': status.invalid && status.touched }"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="done">done</label>
+              <input
+              title="#"
+              ngModel
+              type="text"
+              id="done"
+              #done="ngModel"
+              name="done"
+              class="form-control"
+              required
+              [ngClass]="{ 'is-invalid': done.invalid && done.touched }"
+              />
+            </div>
+          
+            <div class="mb-3">
+              <label for="date">Broj Dresa</label>
+              <input
+              title="#"
+              ngModel
+              type="date"
+              id="date"
+              #date="ngModel"
+              name="date"
+              class="form-control"
+              required
+              [ngClass]="{ 'is-invalid': date.invalid && date.touched }"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="category">Category</label>
+              <input
+              title="#"
+              ngModel
+              type="text"
+              id="category"
+              #category="ngModel"
+              name="category"
+              class="form-control"
+              required
+              [ngClass]="{ 'is-invalid': category.invalid && category.touched }"
+              />
+            </div>
+          
+            <button class="btn btn-success" type="submit">Edit player</button>
+          </form>
     </div>
-    <div class="mb-3">
-      <label for="status">status</label>
-      <input
-      title="#"
-      ngModel
-      type="text"
-      id="status"
-      #status="ngModel"
-      name="status"
-      class="form-control"
-      required
-      [ngClass]="{ 'is-invalid': status.invalid && status.touched }"
-      />
-    </div>
-    <div class="mb-3">
-      <label for="done">done</label>
-      <input
-      title="#"
-      ngModel
-      type="text"
-      id="done"
-      #done="ngModel"
-      name="done"
-      class="form-control"
-      required
-      [ngClass]="{ 'is-invalid': done.invalid && done.touched }"
-      />
-    </div>
-  
-    <div class="mb-3">
-      <label for="date">Broj Dresa</label>
-      <input
-      title="#"
-      ngModel
-      type="date"
-      id="date"
-      #date="ngModel"
-      name="date"
-      class="form-control"
-      required
-      [ngClass]="{ 'is-invalid': date.invalid && date.touched }"
-      />
-    </div>
-    <div class="mb-3">
-      <label for="category">Category</label>
-      <input
-      title="#"
-      ngModel
-      type="text"
-      id="category"
-      #category="ngModel"
-      name="category"
-      class="form-control"
-      required
-      [ngClass]="{ 'is-invalid': category.invalid && category.touched }"
-      />
-    </div>
-  
-    <button class="btn btn-success" type="submit">Edit player</button>
-  </form>
+</div>
