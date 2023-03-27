@@ -39,7 +39,7 @@ export class EditTodoComponent implements OnInit {
   updateTodo(f:NgForm) {
    let id =this.id as string;
    this.todoService.update(id, f.value);
-   window.alert('Igrac je editovan')
+   window.alert('Todo je editovan')
    this.router.navigate([""])
    
   }
