@@ -9,6 +9,7 @@ import { TodoComponent } from './components/todo/todo.component';
 import { NavComponent } from './shared/nav/nav.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { TodoDetailsComponent } from './components/todo-details/todo-details.component';
+import { EditTodoComponent } from './components/edit-todo/edit-todo.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { TodoDetailsComponent } from './components/todo-details/todo-details.com
     TodoComponent,
     NavComponent,
     FooterComponent,
-    TodoDetailsComponent
+    TodoDetailsComponent,
+    EditTodoComponent
   ],
   imports: [
     BrowserModule,
